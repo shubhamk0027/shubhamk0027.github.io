@@ -20,7 +20,6 @@ let timer =-1;
 let startingTime = 0;
 let totalMins=0;
 let totalSecs=0;
-
 //Shuffling the cards
 function shuffle(array) {
     var currentIndex = array.length, temporaryValue, randomIndex;
@@ -68,10 +67,10 @@ function firstCard(target){
     // console.log(target,selected)
     // console.log('1st card selected')
     target.className = 'card open show';
+    updateScore();
 }
 
 function secondCard(target){
-    updateScore();
     if(target.className.includes('open')){
         target.className = 'card';
         // console.log('same selection')
@@ -85,12 +84,16 @@ function secondCard(target){
         target.removeEventListener('click',whenClicked);
         matched++;
         if(matched==8)
-            winText();
+        winText();
         selected=0;
         rotate(target);
         console.log("Now Correctly matched!");
     }
     else{
+        wrongAttempts++;
+        if (wrongAttempts<9 && wrongAttempts%2==0){
+            starBox.children[0].remove(); starRating--;
+        }
         selected.className=target.className='show open card';
         let referenceToSelected = selected;
         selected = 0;
@@ -104,9 +107,8 @@ function secondCard(target){
                 referenceToSelected=0;
             }, 300);
         },300);
-        // console.log("Incorrect match");
-        moves--;
     }
+    updateScore();
 }
 
 function rotate(target){
@@ -117,9 +119,7 @@ function rotate(target){
 function updateScore(){
     moves++;
     movesBox.innerText=moves;
-    if (moves <9 && moves%2==0){
-        starBox.children[0].remove(); starRating--;
-    }
+
 }
 function winText(){
     commentBox.style.display='block';
