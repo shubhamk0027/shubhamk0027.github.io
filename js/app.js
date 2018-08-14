@@ -15,6 +15,7 @@ let selected =0;
 let moves = 0;
 let matched =0;
 let starRating = 5;
+let wrongAttempts=0;
 //Timer variables
 let timer =-1;
 let startingTime = 0;
