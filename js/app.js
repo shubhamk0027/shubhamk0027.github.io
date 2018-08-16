@@ -8,8 +8,8 @@ let movesBox = document.getElementById('moves');
 let textBox = document.getElementById('text');
 let commentBox=document.getElementById('comment');
 let restartButton = document.getElementsByClassName('restart');
+let hintsActive =false;
 //Variables
-let rotateAnimation = 'rotate 0.3s';
 let cardBackground = '#2e3d49';
 let selected =0;
 let moves = 0;
@@ -23,7 +23,7 @@ let totalMins=0;
 let totalSecs=0;
 //Shuffling the cards
 function shuffle(array) {
-    var currentIndex = array.length, temporaryValue, randomIndex;
+    let currentIndex = array.length, temporaryValue, randomIndex;
     while (currentIndex !== 0) {
         randomIndex = Math.floor(Math.random() * currentIndex);
         currentIndex -= 1;
@@ -55,66 +55,48 @@ function whenClicked(event){
         }, 1000);
     }
 
+    if(hintsActive) return;
+
     target = event.target;
-    if(selected!=0)
+    if(target.children.length==0) //means target is the icon not the list element
+    target =target.parentElement
+    if(selected!==0)
         secondCard(target);              
-    else{
+    else
         firstCard(target);
-        selected=target;
-    }    
+    console.log(selected)
 }
 
 function firstCard(target){
-    // console.log(target,selected)
     // console.log('1st card selected')
-    target.className = 'card open show';
-    updateScore();
+    target.className = 'card open';
+    selected=target;
 }
 
 function secondCard(target){
     if(target.className.includes('open')){
-        target.className = 'card';
-        // console.log('same selection')
-        selected=0;
-    return
+        console.log('same selection')
+        return
     }
-    // console.log('2nd card selected');
-    if(selected.innerHTML==target.innerHTML){
-        target.className=selected.className='card show match';
-        selected.removeEventListener('click',whenClicked);
+    let refToSelected=selected;
+    selected=0;
+    console.log('2nd card selected');
+    if(refToSelected.innerHTML==target.innerHTML){
+        refToSelected.removeEventListener('click',whenClicked);
         target.removeEventListener('click',whenClicked);
         matched++;
         if(matched==8)
-        winText();
-        selected=0;
-        rotate(target);
+            winText();
+        refToSelected.className=target.className='card match';
         console.log("Now Correctly matched!");
     }
     else{
-        wrongAttempts++;
-        if (wrongAttempts<9 && wrongAttempts%2==0){
-            starBox.children[0].remove(); starRating--;
-        }
-        selected.className=target.className='show open card';
-        let referenceToSelected = selected;
-        selected = 0;
-        setTimeout(()=>{
-            console.log('started shaking');
-            target.classList.add('wrong');
-            referenceToSelected.classList.add('wrong');
-            setTimeout(() => {
-                target.className='card';
-                referenceToSelected.className='card';
-                referenceToSelected=0;
-            }, 300);
-        },300);
+        aWrongAttempt()
+        refToSelected.className=target.className='card wrong';
+        setTimeout(()=>{target.className=refToSelected.className='card'},300)
+        console.log('Wrong Selection');
     }
     updateScore();
-}
-
-function rotate(target){
-    target.style.animation= 'none';    
-    target.style.animation= rotateAnimation;        
 }
 
 function updateScore(){
@@ -140,7 +122,40 @@ restartButton[0].addEventListener('click',function(){
 restartButton[1].addEventListener('click',function(){
     location.reload(true);
 })
+function aWrongAttempt(){
+    wrongAttempts++;
+    if (wrongAttempts<9 && wrongAttempts%2==0){
+        starBox.children[0].remove(); starRating--;
+    }
+}
 
+function hint(){
+    if(timer==-1){ 
+        alert('You must start the game in order to use Hint!')
+        return;
+    }
+    console.log('hints active')
+    aWrongAttempt();
+    aWrongAttempt();
+    aWrongAttempt();
+    updateScore();
+    updateScore();
+    updateScore();
+    hintsActive=true;
+    for (let i=0; i<cards.length;i++){
+        if(!cards[i].className.includes('match'))
+            cards[i].classList.add('open');   
+    }
+    setTimeout(()=>{
+        for (let i=0; i<cards.length;i++){
+            if(selected!==cards[i])
+                cards[i].classList.remove('open');   
+        }
+        console.log('hints disabled')
+        hintsActive=false; 
+    },1500)    
+
+}
 //Run all the functions
 shuffle(cards);
 addEvents(cards);

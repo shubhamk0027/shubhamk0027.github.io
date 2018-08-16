@@ -31,6 +31,7 @@ body {
 h1 {
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
+    margin:15px 0 ;
 }
 
 /*
@@ -66,22 +67,22 @@ h1 {
 }
 
 #deck .card.open {
-    transform: rotateY(180);
     background: #02b3e4;
     cursor: default;
-}
-
-
-#deck .card.show {
     font-size: 33px;
-    animation:rotate 0.4s;
+    animation: rotate 0.2s;
 }
-
 #deck .card.match {
     cursor: default;
     background: #02ccba;
+    animation:popup 0.2s;
     font-size: 33px;
 }
+#deck .card.wrong {
+    font-size: 33px;
+    background:red;
+    animation:shake 0.3s cubic-bezier(.36,.07,.19,.97) both;
+} 
 #deck .card:hover{
     box-shadow:0 0 10px white;
 }
@@ -137,8 +138,23 @@ p{
     padding:0;
     margin:0;
 }
-
-
+button{
+    border: none;
+    padding:1vw;
+    width:400px;
+    margin-top:-4px;
+    margin-bottom:4px;
+    border-radius: 5px;
+    font-size: inherit;
+    color:white;
+    background: rgb(143, 184, 223);
+}
+#hint p{
+    display: block;
+}
+button:hover{
+    background: rgb(93, 115, 161);
+}
 /* Animations*/
 @keyframes rotate{
     0% { -webkit-transform: rotate(0deg);
@@ -152,29 +168,42 @@ p{
 }
 
 @keyframes shake {
-    10%, 90% {
+    10%,90% {
       transform: translate3d(-1px, 0, 0);
     }
     
-    20%, 80% {
-      transform: translate3d(2px, 0, 0);
+    30%,70% {
+      transform: translate3d(7px, 0, 0);
     }
   
-    30%, 50%, 70% {
-      transform: translate3d(-4px, 0, 0);
+    50%{
+      transform: translate3d(-10px, 0, 0);
     }
-  
-    40%, 60% {
-      transform: translate3d(4px, 0, 0);
-    }
-  }
 
-#deck .card.wrong {
-    animation:shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
-    background:red;
-}  
-/* This #deck .card.wrong also tells us the order in which we have to give preference
-    first wrong >card >deck
-/*A Cubic Bezier curve is defined by four points P0, P1, P2, and P3. P0 and P3 are the start and the end of the curve and, in CSS these points are fixed as the coordinates are ratios. P0 is (0, 0) and represents the initial time and the initial state, P3 is (1, 1) and represents the final time and the final state.
-The cubic-bezier() __function__ can be used with the animation-timing-function property and the transition-timing-function property. 
-*/
+  }
+@keyframes popup {
+    0% {
+        transform: scale(1);
+    }
+    40%{
+        transform: scale(1.1)
+    }
+    50% {
+        transform: scale(1.3);
+    }
+    60% {
+        transform: scale(1.2);
+    }
+    70% {
+        transform: scale(1.1);
+    }
+    80% {
+        transform: scale(0.9);
+    }
+    90% {
+        transform: scale(0.8);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
