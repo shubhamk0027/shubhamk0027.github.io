@@ -1,0 +1,419 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Fira Code', monospace;
+    font-size: 14px;
+    background-color: #212121;
+    color: #ccd6f6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 0 20px;
+}
+
+/* Navbar */
+nav {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #212121;
+    z-index: 1000;
+}
+
+.profile-image {
+    width: 25%;
+    height: 28%;
+    border-radius: 50%;
+    overflow: hidden;
+    /* margin-right: 20px; */
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.logo {
+    font-size: 24px;
+    color: white;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    display: block;
+    /* border: 1px solid white; */
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: black;
+    background-color: white;
+}
+
+.resume-button {
+    padding: 10px 20px;
+    border: 1px solid white;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.resume-button:hover {
+    background-color: white;
+    color: black;
+}
+
+/* Hero Section */
+.hero {
+    width: 65%;
+    margin-top: 10%; 
+    text-align: left;
+    line-height: 1.5;
+}
+
+.intro {
+    color: #c8cddc;
+    font-size: 24px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-size: 45px;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.hero h2 {
+    font-size: 35px;
+    color: #8892b0;
+    margin-bottom: 20px;
+}
+
+.description {
+    font-size: 18px;
+    color: #c8cddc;
+    margin-bottom: 40px;
+}
+
+.description a {
+    color: white;
+    text-decoration: none;
+    border-bottom: 1px solid white;
+    transition: color 0.3s, border-color 0.3s;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 12px 24px;
+    border: 1px solid white;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: white;
+    color: black;
+}
+
+#experience, #achievements, #projects, #education, #certifications {
+    width: 65%;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Education Item */
+.education-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 4px;
+    padding-left: 15px;
+}
+
+.education-logo {
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.education-logo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 4px;
+}
+
+.education-details h3 {
+    font-size: 18px;
+    color: #e6f1ff;
+    margin: 0;
+}
+
+.education-details p {
+    margin: 5px 0;
+    color: #8892b0;
+    font-size: 14px;
+}
+
+.education-details .duration,
+.education-details .grade,
+.education-details .activities,
+.education-details .skills {
+    font-size: 14px;
+    color: #8892b0;
+}
+
+/* Experience Item */
+.experience-item {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    border-left: 2px solid white;
+    padding-left: 20px;
+    position: relative;
+}
+
+.experience-item:last-child {
+    margin-bottom: 0;
+}
+
+.experience-logo {
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.experience-logo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 4px;
+}
+
+.experience-details {
+    flex: 1;
+}
+
+.experience-details h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #e6f1ff;
+}
+
+.experience-details p {
+    margin: 5px 0;
+    color: #8892b0;
+    font-size: 14px;
+}
+
+.experience-role {
+    margin-top: 15px;
+    padding-left: 20px;
+    border-left: 2px solid white;
+    margin-bottom: 10px;
+}
+
+.experience-role.open .dropdown-content {
+    display: block;
+}
+
+.dropdown-content {
+    display: none;
+    margin-top: 10px;
+    padding-left: 10px;
+}
+
+.dropdown-icon {
+    font-size: 14px;
+    color: white;
+    transition: transform 0.3s;
+}
+
+.experience-role h4 {
+    font-size: 16px;
+    color: #e6f1ff;
+    margin-bottom: 5px;
+}
+
+.experience-role p {
+    font-size: 14px;
+    color: #8892b0;
+}
+
+
+/* Honor Item */
+.honor-item {
+    width: 100%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    border-left: 2px solid white;
+    padding-left: 20px;
+    transition: background-color 0.3s;
+}
+
+.honor-item h3 {
+    font-size: 18px;
+    margin: 0;
+    color: #e6f1ff;
+}
+
+.honor-item .date {
+    font-size: 14px;
+    color: #8892b0;
+    margin-bottom: 5px;
+}
+
+.honor-item .issuer, .honor-item .association {
+    font-size: 14px;
+    color: #8892b0;
+    margin: 5px 0;
+}
+
+
+/* Project Item */
+.project-item {
+    margin-bottom: 20px;
+    padding: 15px;
+    border-left: 4px solid white;
+    border-radius: 4px;
+    padding-left: 15px;
+    transition: background-color 0.3s;
+}
+
+.project-item h3 {
+    font-size: 18px;
+    margin: 0;
+    color: #e6f1ff;
+}
+
+.project-item .date {
+    font-size: 14px;
+    color: #8892b0;
+    margin-bottom: 5px;
+}
+
+.project-item .association, .project-item .description {
+    font-size: 14px;
+    color: #8892b0;
+    margin: 5px 0;
+}
+.project-link {
+    color:white;
+}
+
+
+/* Certification Item */
+.certification-item {
+    display: flex;
+    align-items: flex-start;
+    border-left: 4px solid white;
+    border-radius: 4px;
+    padding: 15px;
+    margin-bottom: 20px;
+    transition: background-color 0.3s;
+}
+
+.certification-logo {
+    margin-right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 4px;
+}
+
+.certification-details {
+    flex: 1;
+}
+
+.certification-details h3 {
+    font-size: 18px;
+    margin: 0;
+    color: #e6f1ff;
+}
+
+.certification-details p {
+    font-size: 14px;
+    margin: 5px 0;
+    color: #8892b0;
+}
+
+.issued-date,
+.credential-id,
+.skills {
+    font-size: 14px;
+    color: #8892b0;
+}
+
+/* Credential Link */
+.credential-link {
+    display: inline-block;
+    padding: 8px 12px;
+    border: 1px solid white;
+    border-radius: 4px;
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    margin-top: 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Footer Styles */
+footer {
+    display: block;
+    color: #ccd6f6;
+    height: 50%;
+    width: 20%;
+    padding: 20px 0;
+    justify-content: center;
+    align-items: center;
+    border-top: 2px solid white;
+    margin-top:10%;
+    margin-bottom:10%;
+}
+
+.footer-container {
+    text-align: center;
+    width: 100%;
+    padding: 0 20px;
+}
+
+footer a {
+    color: white;
+}
+
+.footer-container p {
+    margin: 10px 0;
+    font-size: 14px;
+    color: #8892b0;
+}
+
+

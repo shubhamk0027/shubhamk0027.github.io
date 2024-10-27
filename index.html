@@ -1,93 +1,294 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>Matching Game</title>
-    <meta name="description" content="">
-    <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
-    <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Coda">
-    <link rel="stylesheet" href="css/app.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shubham Kumar</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-
-    <div class="container">
-        <header>
-            <h1>Matching Game</h1>
-        </header>
-
-        <section class="score-panel">
-        	<ul id="stars">
-                Rating:
-                <li><i class="fa fa-star"></i></li>
-                <li><i class="fa fa-star"></i></li>
-                <li><i class="fa fa-star"></i></li>
-                <li><i class="fa fa-star"></i></li>
-                <li><i class="fa fa-star"></i></li>
-            </ul>
-            Timer <span id='mins'>00</span>:<span id='secs'>00</span>
-        	<span id="moves"> 0</span> Moves
-            <div class="restart">
-                <i class="fa fa-repeat"></i>
-            </div>
-            
-        </section>
-        <button onclick='hint()'>Hint (=3 Moves)</button>
-        <ul id="deck">
-            <li class="card">
-                <i class="fa fa-diamond"></i>
-            </li>
-            <li class="card">
-                <i class="fa fa-paper-plane-o"></i>
-            </li>
-            <li class="card">
-                <i class="fa fa-anchor"></i>
-            </li>
-            <li class="card">
-                <i class="fa fa-bolt"></i>
-            </li>
-            <li class="card">
-                <i class="fa fa-cube"></i>
-            </li>
-            <li class="card">
-                <i class="fa fa-anchor"></i>
-            </li>
-            <li class="card">
-                <i class="fa fa-leaf"></i>
-            </li>
-            <li class="card">
-                <i class="fa fa-bicycle"></i>
-            </li>
-            <li class="card">
-                <i class="fa fa-diamond"></i>
-            </li>
-            <li class="card">
-                <i class="fa fa-bomb"></i>
-            </li>
-            <li class="card">
-                <i class="fa fa-leaf"></i>
-            </li>
-            <li class="card">
-                <i class="fa fa-bomb"></i>
-            </li>
-            <li class="card ">
-                <i class="fa fa-bolt"></i>
-            </li>
-            <li class="card">
-                <i class="fa fa-bicycle"></i>
-            </li>
-            <li class="card">
-                <i class="fa fa-paper-plane-o"></i>
-            </li>
-            <li class="card">
-                <i class="fa fa-cube"></i>
-            </li>
+    <!-- Navbar -->
+    <nav>
+        <div class="logo"></div>
+        <ul class="nav-links">
+            <li><a href="#">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#achievements">Achievements</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#certifications">Certifications</a></li>
         </ul>
-    </div>
-    <!--the order in which classes are added here does not matters but the way in which they are defined sets its preference-->
-    <div id="comment">
-        <p id='text'></p>
-        <i class="fa fa-repeat restart"></i>
-    </div>
-    <script src="js/app.js"></script>
+        <a href="#" class="resume-button">Resume</a>
+    </nav>
+
+
+    <!-- Main Section -->
+    <section class="hero" id="about">
+        <div class="profile-image">
+            <img src="dp.png" alt="Profile Image">
+        </div>
+        <p class="intro">Hi! I am </p>
+        <h1>Shubham Kumar</h1>
+        <h2>I build efficient backend systems.</h2>
+        <p class="description">
+            I’m a backend developer specializing in building clean, scalable, and reliable solutions. 
+            Currently, I’m focused on delivering impactful backend services at Databricks. 
+            I graduated from Delhi Technological University (DTU) in 2021 with a degree in Computer Science.
+        </p>
+        <a href="https://www.linkedin.com/in/shubhamk0027/" class="cta-button">Linkedin</a> <a href="https://github.com/shubhamk0027" class="cta-button">Github</a> <a href="mailto:shubhamk0027@gmail.com" class="cta-button">Gmail</a>
+        <a href="https://www.codechef.com/users/shubham_279" class="cta-button">Codechef</a> <a href="https://codeforces.com/profile/_blast" class="cta-button">Codeforces</a>
+    </section>
+
+    <section id="education">
+        <br><br><br><br><br><br>
+        <br><br><br><br><br><br>
+        <h1>Education</h1>
+        <div class="education-item">
+            <div class="education-logo">
+                <img src="https://upload.wikimedia.org/wikipedia/en/b/b5/DTU%2C_Delhi_official_logo.png">
+            </div>
+            <div class="education-details">
+                <h3>Delhi College of Engineering</h3>
+                <p>Bachelor's degree, Computer Engineering</p>
+                <p class="duration">2017 - 2021</p>
+                <p class="grade">Grade: 8.9</p>
+                <p class="activities">Activities and societies: IEEE DTU, DCE Coders, Yuvaan Literary and Film Festival</p>
+                <!-- <p class="skills"><strong>Skills:</strong> Computer Science · Communication</p> -->
+            </div>
+        </div>
+    </section>
+
+    <section id="experience">
+        <br><br><br><br><br><br>
+        <h1>Experience</h1>
+        <div class="experience-item">
+            <div class="experience-logo">
+                <img width="48" src="https://media.licdn.com/dms/image/v2/D560BAQFPIRKiPVETuw/company-logo_100_100/company-logo_100_100/0/1697215766274?e=1738195200&amp;v=beta&amp;t=EuAuMpbgsWhSRUq9PX3Dpjh-bKBnMmRub9WMx3rOqy8" loading="lazy" height="48" alt="Databricks logo" id="ember2072" class="ivm-view-attr__img--centered EntityPhoto-square-3   evi-image lazy-image ember-view">
+            </div>
+            <div class="experience-details">
+                <h3>Software Engineer II</h3>
+                <p>Databricks - Full-time</p>
+                <p>Dec 2023 - Present • Bengaluru, Karnataka, India - Office</p>
+            </div>
+        </div>
+
+        <div class="experience-item">
+            <div class="experience-logo">
+                <img width="48" src="https://media.licdn.com/dms/image/v2/D4E0BAQEW9sPQpGYYPg/company-logo_100_100/company-logo_100_100/0/1691600977849/sprinklr_logo?e=1738195200&amp;v=beta&amp;t=-n_FC6CcQ0-gb5cOHyZ7MF65J7v7wx1sEeyL4HXY1OQ" loading="lazy" height="48" alt="Sprinklr logo" id="ember740" class="ivm-view-attr__img--centered EntityPhoto-square-3   evi-image lazy-image ember-view">
+            </div>
+            <div class="experience-details">
+                <h3>Sprinklr</h3>
+                <p>Full-time • 2 yrs 7 mos</p>
+
+                <div class="experience-role" onclick="toggleDropdown(this)">
+                    <h4>Senior Product Engineer</h4>
+                    <p>Nov 2023 - Dec 2023 • Gurugram, Haryana, India</p>
+                </div>
+
+                <div class="experience-role" onclick="toggleDropdown(this)">
+                    <h4>Manager, Product Engineer ▼</h4>
+                    <p>Jul 2023 - Oct 2023 • 4 mos • Gurugram, Haryana, India - Hybrid</p>
+                    <div class="dropdown-content">
+                        <p>• Leading and spearheading two significant projects: Media Monitoring Analytics, facilitating brand analysis from news, blogs, and print sources, and Sprinklr Newsletters, helping PR and communication teams to share messages, top news and insights across team members.</p>
+                        <p>• Actively engaged in supervising engineers, designing architectures, code reviews, & mentoring interns.</p>
+                    </div>
+                </div>
+
+                <div class="experience-role" onclick="toggleDropdown(this)">
+                    <h4>Product Engineer  ▼</h4>
+                    <p>Jun 2021 - Jul 2023 • 2 yrs 2 mos • Gurugram, Haryana, India</p>
+                    <div class="dropdown-content">
+                        <p>• Owned 3 major products in Research Team - Media Monitoring Analytics, Sprinklr Newsletters, and Manual article ingestion. Played a key role in designing, implementing, and improving them for various business-critical applications. Also simplified integration for Restricted messaging channels like Dow Jones Factiva.</p>
+                        <p>• Worked on over 150 tasks, including adding features, solving bugs & issues and added patches on existing elasticsearch-core, elasticsearch-plugins & lucene-core jars.</p>
+                        <p>• Added caching strategy for an Elasticsearch cluster and optimized queries, resulting in search results that were 64% faster and a 22% reduction in server load.</p>
+                        <p>• Proficient in On-call support, debugging slowness, lags & high-loads. </p>
+                        <p>• Revamped architecture for long-running platform tasks, achieving a ∼0% failure rate by implementing various distributed system concepts such as heartbeats.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="experience-item">
+            <div class="experience-logo">
+                <img width="48" src="https://media.licdn.com/dms/image/v2/D4E0BAQEW9sPQpGYYPg/company-logo_100_100/company-logo_100_100/0/1691600977849/sprinklr_logo?e=1738195200&amp;v=beta&amp;t=-n_FC6CcQ0-gb5cOHyZ7MF65J7v7wx1sEeyL4HXY1OQ" loading="lazy" height="48" alt="Sprinklr logo" id="ember740" class="ivm-view-attr__img--centered EntityPhoto-square-3   evi-image lazy-image ember-view">
+            </div>
+            <div class="experience-details">
+                <h3>Sprinklr</h3>
+                <p>University Internship</p>
+                <div class="experience-role" onclick="toggleDropdown(this)">
+                    <p>May 2020 - Jun 2020 • 2 mos • New Delhi, Delhi, India</p>
+                    <h4>Product Engineering Intern ▼ </h4>
+                    <div class="dropdown-content">
+                        <p>• Implemented Mini-Sprinklr, a reliable service for fetching interested tweets and its retweets from Twitter and saving it to Elasticsearch via Kafka for providing quick search and analytics.</p>
+                        <p>• Deployed a JSON MockServer for the front end team with support for persistence, schema checks, and regular expressions in URL, configured with a Slackbot. Written over 3500+ lines of code from start, with a beautiful Technical document.</p>
+                        <p>• Shipped a Shareable Link Preview Generator with a Chrome Extension to make any link shareable with previews in them to display, when shared across any social media channel.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br><br><br><br><br><br>
+    </section>
+
+    <section id="achievements">
+        <br><br><br><br><br><br>
+        <h1>Achievements</h1>
+        <div class="honor-item">
+            <h3>Highest Rating</h3>
+            <p class="date">Jan 2022</p>
+            <p>Codechef 6 Star, Codeforces Candidate Master</p>
+        </div>
+        
+        <div class="honor-item">
+            <h3>Google Hashcode, National Rank 22</h3>
+            <p class="issuer">Issued by Google • Jan 2020</p>
+            <p class="association">🏛️ Associated with Delhi College of Engineering</p>
+        </div>
+
+        <div class="honor-item">
+            <h3>HackerEarth October Circuits'19 Global Rank 5</h3>
+            <p class="issuer">Issued by HackerEarth • Oct 2019</p>
+            <p class="association">🏛️ Associated with Delhi College of Engineering</p>
+        </div>
+
+        <div class="honor-item">
+            <h3>ACM ICPC Chennai Provincial, National Rank 7 (Cash Prize Winner)</h3>
+            <p class="issuer">Issued by ACM ICPC India • Jan 2019</p>
+            <p class="association">🏛️ Associated with Delhi College of Engineering</p>
+        </div>
+
+        <div class="honor-item">
+            <h3>IEEE Xtreme'13, Asia Pacific Rank 10, International Rank 119</h3>
+            <p class="issuer">Issued by IEEE • Jan 2019</p>
+            <p class="association">🏛️ Associated with Delhi College of Engineering</p>
+        </div>
+
+        <div class="honor-item">
+            <h3>Interview Bit Global Leaderboard Best Rank - 89</h3>
+            <p class="issuer">Issued by Interview Bit • Jan 2019</p>
+            <p class="association">🏛️ Associated with Delhi College of Engineering</p>
+        </div>
+
+        <div class="honor-item">
+            <h3>International Informatics Olympiad Level 1 State Rank 1, International Rank 4</h3>
+            <p class="issuer">Issued by Silver Zone • Jan 2015</p>
+            <p class="association">🏫 Associated with Dav Public School</p>
+        </div>
+        <br><br><br><br><br><br>
+    </section>
+
+    <section id="projects">
+        <br><br><br><br><br><br>
+        <h1>Projects</h1>
+        <div class="project-item">
+            <h3>Offline Payment System</h3>
+            <p class="date">Nov 2020 - Dec 2020 | 🏛️ Associated with Delhi College of Engineering</p>
+            <p class="description">Devised and prototyped a method for secure and software-based Offline Payment System.</p>
+        </div>
+
+        <div class="project-item">
+            <h3>Secure Distributed File Server</h3>
+            <p class="date">Nov 2020 - Dec 2020 | 🏛️ Associated with Delhi College of Engineering</p>
+        </div>
+
+        <div class="project-item">
+            <h3>Mock Server</h3>
+            <p class="date">Jun 2020 - Jun 2020 | 🌐 Associated with Sprinklr</p>
+            <a href="https://github.com/shubhamk0027/MockServer" class="project-link">Show project &rarr;</a>
+            <p class="description">A blazing fast fake server with support for multiple teams, persistence, schema checks, and regular expressions on HTTP requests and a Slackbot for the front-end support.</p>
+        </div>
+
+        <div class="project-item">
+            <h3>Shareable Link Preview Generator</h3>
+            <p class="date">Jun 2020 - Jun 2020 | 🌐 Associated with Sprinklr</p>
+            <p class="description">A Shareable Link generator with previews in them for all social media channels.</p>
+        </div>
+
+        <div class="project-item">
+            <h3>Unity 3D Games - 3D Space Shooter & Snakes 2D</h3>
+            <p class="date">Sep 2017 - Sep 2017</p>
+            <a href="https://github.com/shubhamk0027/My-First-Game-In-Unity" class="project-link">Show project &rarr;</a>
+        </div>
+        <br><br><br><br><br><br>
+    </section>
+
+
+    <section id="certifications">
+        <br><br><br><br><br><br>
+        <h1>Certifications</h1>
+        
+        <div class="certification-item">
+            <img src="https://media.licdn.com/dms/image/v2/D4D0BAQEpzUzNtpX_Vw/company-logo_200_200/company-logo_200_200/0/1705387368646/educative_inc_logo?e=1738195200&v=beta&t=bzzZTcoW-NHv6hk7ld1jkHpAQMJOp2gw6xSkSHmUdSA" alt="Educative Logo" class="certification-logo">
+            <div class="certification-details">
+                <h3>Java Multithreading for Senior Engineering Interviews</h3>
+                <p>Educative | Issued Oct 2023 | Credential ID: vj6Gj6mGmq3s4rvmqpN1BpT8xO0r0prqKhl</p>
+            </div>
+        </div>
+
+        <div class="certification-item">
+            <img src="https://media.licdn.com/dms/image/v2/D4D0BAQEpzUzNtpX_Vw/company-logo_200_200/company-logo_200_200/0/1705387368646/educative_inc_logo?e=1738195200&v=beta&t=bzzZTcoW-NHv6hk7ld1jkHpAQMJOp2gw6xSkSHmUdSA" alt="Educative Logo" class="certification-logo">
+            <div class="certification-details">
+                <h3>Grokking Modern System Design Interview for Engineers & Managers</h3>
+                <p>Educative | Issued Sep 2023 | Credential ID: 0g6xMWFgAB3ZOLqRxTrmJMNJkNlzhP</p>
+                <p class="skills">Skills: System Design · High-Level Design · Database Design</p>
+            </div>
+        </div>
+
+        <div class="certification-item">
+            <img src="https://media.licdn.com/dms/image/v2/D4D0BAQEpzUzNtpX_Vw/company-logo_200_200/company-logo_200_200/0/1705387368646/educative_inc_logo?e=1738195200&v=beta&t=bzzZTcoW-NHv6hk7ld1jkHpAQMJOp2gw6xSkSHmUdSA" alt="Educative Logo" class="certification-logo">
+            <div class="certification-details">
+                <h3>Grokking the Low Level Design Interview Using OOD Principles</h3>
+                <p>Educative | Issued Sep 2023 | Credential ID: g5g3ywCNArJ24nM3xtK05p8508GnFk</p>
+            </div>
+        </div>
+
+        <div class="certification-item">
+            <img src="https://media.licdn.com/dms/image/v2/C4E0BAQFq6Hmf44P0EA/company-logo_200_200/company-logo_200_200/0/1630576030860?e=1738195200&v=beta&t=FxYYZHPq2L87axYTcee7j39FQ9DNYQILfQFtzZy_Jdk" alt="MongoDB University Logo" class="certification-logo">
+            <div class="certification-details">
+                <h3>M320: Data Modeling</h3>
+                <p>MongoDB University | Issued Oct 2022</p>
+            </div>
+        </div>
+
+        <div class="certification-item">
+            <img src="https://media.licdn.com/dms/image/v2/C4E0BAQFq6Hmf44P0EA/company-logo_200_200/company-logo_200_200/0/1630576030860?e=1738195200&v=beta&t=FxYYZHPq2L87axYTcee7j39FQ9DNYQILfQFtzZy_Jdk" alt="MongoDB University Logo" class="certification-logo">
+            <div class="certification-details">
+                <h3>M201: MongoDB Performance</h3>
+                <p>MongoDB University | Issued Sep 2022</p>
+            </div>
+        </div>
+
+        <div class="certification-item">
+            <img src="https://media.licdn.com/dms/image/v2/C560BAQHiNYfm0YHKrg/company-logo_200_200/company-logo_200_200/0/1656621848677/udacity_logo?e=1738195200&v=beta&t=c34fWfviPOnFnWdi1M1nZvqb23V1dlHvtSThhmsehZI" alt="Udacity Logo" class="certification-logo">
+            <div class="certification-details">
+                <h3>Google Front End India Challenge Scholarship</h3>
+                <p>Udacity | Issued Feb 2018</p>
+            </div>
+        </div>
+
+        <div class="certification-item">
+            <img src="https://ioinformatics.org/icons/ioi_yellow_small_v2020.png" alt="Silver Zone Logo" class="certification-logo">
+            <div class="certification-details">
+                <h3>International Informatics Olympiad State Rank 1 Round 1</h3>
+                <p>Silver Zone | Issued Jan 2014</p>
+            </div>
+        </div>
+        <br><br><br><br><br><br>
+    </section>
+
+
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-container">
+            <p>Wanna play a quick <a href=game.html>game?</a></p>
+        </div>
+    </footer>
+
+    <script>
+    function toggleDropdown(element) {
+            element.classList.toggle("open");
+    }
+    </script>
 </body>
 </html>
