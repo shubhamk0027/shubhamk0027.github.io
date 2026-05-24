@@ -340,7 +340,7 @@ h1 {
 
 .beyond-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 18px;
 }
 
@@ -457,6 +457,12 @@ a.beyond-photo {
 }
 
 @media (max-width: 900px) {
+    .beyond-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 560px) {
     .beyond-grid {
         grid-template-columns: 1fr;
     }
