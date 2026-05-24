@@ -13,67 +13,57 @@
         <div class="logo"></div>
         <ul class="nav-links">
             <li><a href="#">About</a></li>
-            <li><a href="#education">Education</a></li>
             <li><a href="#experience">Experience</a></li>
             <li><a href="#achievements">Achievements</a></li>
             <li><a href="#projects">Projects</a></li>
+            <li><a href="#education">Education</a></li>
             <li><a href="#certifications">Certifications</a></li>
+            <li><a href="#highlights">Highlights</a></li>
         </ul>
-        <a href="https://drive.google.com/file/d/1XNjTDnOVeLYDkUAvhoLKITmzDunZDhr_/view?usp=sharing#" class="resume-button">Resume</a>
+        <a href="https://drive.google.com/file/d/1wOElLoxvHKjlO80S4tIsCyn56uIRlvMX/view?usp=drive_link" class="resume-button">Resume</a>
     </nav>
 
 
     <!-- Main Section -->
     <section class="hero" id="about">
+        <br>
+        <br>
+        <br>
         <div class="profile-image">
             <img src="dp.png" alt="Profile Image">
         </div>
+        <br>
+        <br>
         <p class="intro">Hi! I am </p>
         <h1>Shubham Kumar</h1>
-        <h2>I build efficient backend systems.</h2>
+        <!-- <h2>I build efficient backend systems.</h2> -->
         <p class="description">
-            I’m a backend developer specializing in building clean, scalable, and reliable solutions. 
-            Currently, I’m focused on delivering impactful backend services at Databricks. 
-            I graduated from Delhi Technological University (DTU) in 2021 with a degree in Computer Science.
+            I like studying how distributed systems fail — retries, overload, cascading failures, bad assumptions, and everything in between. 
+            I graduated from Delhi Technological University in 2021 and now work on backend infrastructure at Databricks, building systems that stay reliable under real-world stress.
         </p>
         <a href="https://www.linkedin.com/in/shubhamk0027/" class="cta-button">Linkedin</a> <a href="https://github.com/shubhamk0027" class="cta-button">Github</a> <a href="mailto:shubhamk0027@gmail.com" class="cta-button">Gmail</a>
         <a href="https://www.codechef.com/users/shubham_279" class="cta-button">Codechef</a> <a href="https://codeforces.com/profile/_blast" class="cta-button">Codeforces</a>
     </section>
-
-    <section id="education">
-        <br><br><br><br><br><br>
-        <br><br><br><br><br><br>
-        <h1>Education</h1>
-        <div class="education-item">
-            <div class="education-logo">
-                <img src="https://upload.wikimedia.org/wikipedia/en/b/b5/DTU%2C_Delhi_official_logo.png">
-            </div>
-            <div class="education-details">
-                <h3>Delhi College of Engineering</h3>
-                <p>Bachelor's degree, Computer Engineering</p>
-                <p class="duration">2017 - 2021</p>
-                <p class="grade">Grade: 8.9</p>
-                <p class="activities">Activities and societies: IEEE DTU, DCE Coders, Yuvaan Literary and Film Festival</p>
-                <!-- <p class="skills"><strong>Skills:</strong> Computer Science · Communication</p> -->
-            </div>
-        </div>
-    </section>
-
+    
+    <br><br><br><br><br><br>
     <section id="experience">
         <br><br><br><br><br><br>
         <h1>Experience</h1>
         <div class="experience-item">
             <div class="experience-logo">
-                <img width="48" src="https://media.licdn.com/dms/image/v2/D560BAQFPIRKiPVETuw/company-logo_100_100/company-logo_100_100/0/1697215766274?e=1738195200&amp;v=beta&amp;t=EuAuMpbgsWhSRUq9PX3Dpjh-bKBnMmRub9WMx3rOqy8" loading="lazy" height="48" alt="Databricks logo" id="ember2072" class="ivm-view-attr__img--centered EntityPhoto-square-3   evi-image lazy-image ember-view">
+                <img width="48" src="img/db-logo.webp" loading="lazy" height="48" alt="Databricks logo" id="ember2072" class="ivm-view-attr__img--centered  evi-image lazy-image ember-view">
             </div>
-            <div class="experience-details">
+            <div class="experience-details open">
                 <p>Databricks - Full-time</p>
                 <p>Dec 2023 - Present • Bengaluru, Karnataka, India - Office</p>
-                <div class="experience-role" onclick="toggleDropdown(this)">
+                <div class="experience-role open" onclick="toggleDropdown(this)">
                     <h4>Software Engineer II ▼ </h4>
                     <div class="dropdown-content">
-                        <p>• Developing and enhancing the control plane to efficiently manage databases and their associated operations.</p>
-                        <p>• Awarded Hackathon Judges' Choice Winner (FY Q3 2024) for delivering innovative and impactful solutions.</p>
+                        <p>• Founding engineer of Oxide, Databricks’ control plane for database lifecycle management (provisioning, scaling, backup, restore, migration). Led design and development of core systems including Temporal-based workflow orchestration, distributed tracing, and a policy-based authorization system (RBAC + ABAC) — enabling self-serve operations across 1000s of resources in 50+ regions for 10+ teams. </p>
+                        <p>• Serving as a DRI for Storage Durability across TiDB and MySQL. Designed a unified KPI framework (RPO, RTO, backup compliance), automated restore validation pipelines across hundreds of databases, and drove data-driven SLOs that moved durability posture from 70% to consistently green with zero customer-visible data loss incidents. </p>
+                        <p>• Envisioned and delivered the Oxide Admin Console from zero — defined the north star vision, prioritized CUJs, drove cross-team alignment and adoption; consolidated 5+ fragmented tools into a single production critical ops UI, reducing debugging time from ∼ 45 minutes to less than 5 minutes. </p>
+                        <p>• Won multiple internal hackathons (including Judges’ Choice, FY Q3 2025), with solutions adopted by 500+ engineers.</p>
+                        <p>• Mentoring engineers and interns through end-to-end ownership; and contributed to hiring through campus interviews and technical evaluation loops. <a href="https://www.linkedin.com/feed/update/urn:li:activity:7356912342921625600/" class="project-link">LinkedIn Post &rarr;</a></p>
                     </div>
                 </div>
 
@@ -82,23 +72,18 @@
 
         <div class="experience-item">
             <div class="experience-logo">
-                <img width="48" src="https://media.licdn.com/dms/image/v2/D4E0BAQEW9sPQpGYYPg/company-logo_100_100/company-logo_100_100/0/1691600977849/sprinklr_logo?e=1738195200&amp;v=beta&amp;t=-n_FC6CcQ0-gb5cOHyZ7MF65J7v7wx1sEeyL4HXY1OQ" loading="lazy" height="48" alt="Sprinklr logo" id="ember740" class="ivm-view-attr__img--centered EntityPhoto-square-3   evi-image lazy-image ember-view">
+                <img width="48" src="img/Sprinklr-logo.webp" loading="lazy" height="48" alt="Sprinklr logo" id="ember740" class="ivm-view-attr__img--centered EntityPhoto-square-3   evi-image lazy-image ember-view">
             </div>
             <div class="experience-details">
                 <h3>Sprinklr</h3>
                 <p>Full-time • 2 yrs 7 mos</p>
 
-                <div class="experience-role" onclick="toggleDropdown(this)">
-                    <h4>Senior Product Engineer</h4>
-                    <p>Nov 2023 - Dec 2023 • Gurugram, Haryana, India</p>
-                </div>
-
-                <div class="experience-role" onclick="toggleDropdown(this)">
-                    <h4>Manager, Product Engineer ▼</h4>
-                    <p>Jul 2023 - Oct 2023 • 4 mos • Gurugram, Haryana, India - Hybrid</p>
+                <div class="experience-role " onclick="toggleDropdown(this)">
+                    <h4>Senior Product Engineer ▼</h4>
+                    <p>Jul 2023 - Dec 2023 • 5 mos • Gurugram, Haryana, India</p>
                     <div class="dropdown-content">
                         <p>• Leading and spearheading two significant projects: Media Monitoring Analytics, facilitating brand analysis from news, blogs, and print sources, and Sprinklr Newsletters, helping PR and communication teams to share messages, top news and insights across team members.</p>
-                        <p>• Actively engaged in supervising engineers, designing architectures, code reviews, & mentoring interns.</p>
+                        <p>• Actively engaged in supervising engineers, designing architectures, code reviews, & mentoring interns. <a href="https://www.linkedin.com/feed/update/urn:li:activity:7092465954114142209/" class="project-link">LinkedIn Post &rarr;</a></p>
                     </div>
                 </div>
 
@@ -118,7 +103,7 @@
 
         <div class="experience-item">
             <div class="experience-logo">
-                <img width="48" src="https://media.licdn.com/dms/image/v2/D4E0BAQEW9sPQpGYYPg/company-logo_100_100/company-logo_100_100/0/1691600977849/sprinklr_logo?e=1738195200&amp;v=beta&amp;t=-n_FC6CcQ0-gb5cOHyZ7MF65J7v7wx1sEeyL4HXY1OQ" loading="lazy" height="48" alt="Sprinklr logo" id="ember740" class="ivm-view-attr__img--centered EntityPhoto-square-3   evi-image lazy-image ember-view">
+                <img width="48" src="img/Sprinklr-logo.webp" loading="lazy" height="48" alt="Sprinklr logo" id="ember740" class="ivm-view-attr__img--centered EntityPhoto-square-3   evi-image lazy-image ember-view">
             </div>
             <div class="experience-details">
                 <h3>Sprinklr</h3>
@@ -134,6 +119,7 @@
                 </div>
             </div>
         </div>
+
         <br><br><br><br><br><br>
     </section>
 
@@ -145,6 +131,12 @@
             <p class="date">Jan 2022</p>
             <p>Codechef 6 Star, Codeforces Candidate Master</p>
         </div>
+
+        <!-- <div class="honor-item">
+            <h3>Speaker, TiDB x Databricks Meetup</h3>
+            <p class="issuer">Presented at the TiDB x Databricks meetup</p>
+            <p class="association"><a href="https://www.linkedin.com/feed/update/urn:li:activity:7289880385776214016/" class="project-link">View LinkedIn post &rarr;</a></p>
+        </div> -->
         
         <div class="honor-item">
             <h3>Google Hashcode, National Rank 22</h3>
@@ -218,12 +210,31 @@
     </section>
 
 
+    <section id="education">
+        <br><br><br><br><br><br>
+        <h1>Education</h1>
+        <div class="education-item">
+            <div class="education-logo">
+                <img src="https://upload.wikimedia.org/wikipedia/en/b/b5/DTU%2C_Delhi_official_logo.png">
+            </div>
+            <div class="education-details">
+                <h3>Delhi College of Engineering</h3>
+                <p>Bachelor's degree, Computer Engineering</p>
+                <p class="duration">2017 - 2021</p>
+                <p class="grade">Grade: 8.9</p>
+                <p class="activities">Activities and societies: IEEE DTU, DCE Coders, Yuvaan Literary and Film Festival</p>
+                <!-- <p class="skills"><strong>Skills:</strong> Computer Science · Communication</p> -->
+            </div>
+        </div>
+    </section>
+
+
     <section id="certifications">
         <br><br><br><br><br><br>
         <h1>Certifications</h1>
         
         <div class="certification-item">
-            <img src="https://media.licdn.com/dms/image/v2/D4D0BAQEpzUzNtpX_Vw/company-logo_200_200/company-logo_200_200/0/1705387368646/educative_inc_logo?e=1738195200&v=beta&t=bzzZTcoW-NHv6hk7ld1jkHpAQMJOp2gw6xSkSHmUdSA" alt="Educative Logo" class="certification-logo">
+            <img src="img/educative.png" alt="Educative Logo" class="certification-logo">
             <div class="certification-details">
                 <h3>Java Multithreading for Senior Engineering Interviews</h3>
                 <p>Educative | Issued Oct 2023 | Credential ID: vj6Gj6mGmq3s4rvmqpN1BpT8xO0r0prqKhl</p>
@@ -231,7 +242,7 @@
         </div>
 
         <div class="certification-item">
-            <img src="https://media.licdn.com/dms/image/v2/D4D0BAQEpzUzNtpX_Vw/company-logo_200_200/company-logo_200_200/0/1705387368646/educative_inc_logo?e=1738195200&v=beta&t=bzzZTcoW-NHv6hk7ld1jkHpAQMJOp2gw6xSkSHmUdSA" alt="Educative Logo" class="certification-logo">
+            <img src="img/educative.png" alt="Educative Logo" class="certification-logo">
             <div class="certification-details">
                 <h3>Grokking Modern System Design Interview for Engineers & Managers</h3>
                 <p>Educative | Issued Sep 2023 | Credential ID: 0g6xMWFgAB3ZOLqRxTrmJMNJkNlzhP</p>
@@ -240,7 +251,7 @@
         </div>
 
         <div class="certification-item">
-            <img src="https://media.licdn.com/dms/image/v2/D4D0BAQEpzUzNtpX_Vw/company-logo_200_200/company-logo_200_200/0/1705387368646/educative_inc_logo?e=1738195200&v=beta&t=bzzZTcoW-NHv6hk7ld1jkHpAQMJOp2gw6xSkSHmUdSA" alt="Educative Logo" class="certification-logo">
+            <img src="img/educative.png" alt="Educative Logo" class="certification-logo">
             <div class="certification-details">
                 <h3>Grokking the Low Level Design Interview Using OOD Principles</h3>
                 <p>Educative | Issued Sep 2023 | Credential ID: g5g3ywCNArJ24nM3xtK05p8508GnFk</p>
@@ -248,7 +259,7 @@
         </div>
 
         <div class="certification-item">
-            <img src="https://media.licdn.com/dms/image/v2/C4E0BAQFq6Hmf44P0EA/company-logo_200_200/company-logo_200_200/0/1630576030860?e=1738195200&v=beta&t=FxYYZHPq2L87axYTcee7j39FQ9DNYQILfQFtzZy_Jdk" alt="MongoDB University Logo" class="certification-logo">
+            <img src="img/mongo.jpeg" alt="MongoDB University Logo" class="certification-logo">
             <div class="certification-details">
                 <h3>M320: Data Modeling</h3>
                 <p>MongoDB University | Issued Oct 2022</p>
@@ -256,7 +267,7 @@
         </div>
 
         <div class="certification-item">
-            <img src="https://media.licdn.com/dms/image/v2/C4E0BAQFq6Hmf44P0EA/company-logo_200_200/company-logo_200_200/0/1630576030860?e=1738195200&v=beta&t=FxYYZHPq2L87axYTcee7j39FQ9DNYQILfQFtzZy_Jdk" alt="MongoDB University Logo" class="certification-logo">
+            <img src="img/mongo.jpeg" alt="MongoDB University Logo" class="certification-logo">
             <div class="certification-details">
                 <h3>M201: MongoDB Performance</h3>
                 <p>MongoDB University | Issued Sep 2022</p>
@@ -264,7 +275,7 @@
         </div>
 
         <div class="certification-item">
-            <img src="https://media.licdn.com/dms/image/v2/C560BAQHiNYfm0YHKrg/company-logo_200_200/company-logo_200_200/0/1656621848677/udacity_logo?e=1738195200&v=beta&t=c34fWfviPOnFnWdi1M1nZvqb23V1dlHvtSThhmsehZI" alt="Udacity Logo" class="certification-logo">
+            <img src="img/udacity.png" alt="Udacity Logo" class="certification-logo">
             <div class="certification-details">
                 <h3>Google Front End India Challenge Scholarship</h3>
                 <p>Udacity | Issued Feb 2018</p>
@@ -272,22 +283,68 @@
         </div>
 
         <div class="certification-item">
-            <img src="https://ioinformatics.org/icons/ioi_yellow_small_v2020.png" alt="Silver Zone Logo" class="certification-logo">
+            <img src="img/ioi.png" alt="Silver Zone Logo" class="certification-logo">
             <div class="certification-details">
                 <h3>International Informatics Olympiad State Rank 1 Round 1</h3>
                 <p>Silver Zone | Issued Jan 2014</p>
             </div>
         </div>
         <br><br><br><br><br><br>
+        
     </section>
 
+    <section id="highlights">
+        <br><br><br><br><br><br>
+        <h1>Highlights</h1>
+        <p class="section-intro">
+            A few snapshots beyond code - treks, talks, hackathons, and the occasional reset away from the keyboard.
+        </p>
 
+        <div class="beyond-grid">
+            <div class="beyond-card">
+                <div class="beyond-photo">
+                    <img src="img/trekking.jpeg" alt="Trekking outdoors">
+                </div>
+                <h3>Trekking</h3>
+                <p>Six-day trek to Pangarchulla.</p>
+            </div>
 
-    <!-- Footer Section -->
-    <footer>
-        <div class="footer-container">
-            <p>Wanna play a quick <a href=game.html>game?</a></p>
+            <div class="beyond-card">
+                <div class="beyond-photo">
+                    <img src="img/Hackathon 1.png" alt="Hackathon presentation">
+                </div>
+                <h3>Hackathons</h3>
+                <p>Automated on-call summaries.</p>
+            </div>
+
+            <div class="beyond-card">
+                <div class="beyond-photo">
+                    <img src="img/Hackathon 2.png" alt="Hackathon project moment">
+                </div>
+                <h3>Hackathons</h3>
+                <p>Most minutes saved via simple automation.</p>
+            </div>
+
+            <div class="beyond-card">
+                <div class="beyond-photo">
+                    <img src="img/Databricks X TiDB meetup.jpeg" alt="Speaking at TiDB x Databricks meetup">
+                </div>
+                <h3>Speaking</h3>
+                <p>Speaker at TiDB x Databricks Meetup. <a href="https://www.linkedin.com/feed/update/urn:li:activity:7289880385776214016/" class="project-link">LinkedIn &rarr;</a></p>
+            </div>
+
         </div>
+        <br><br><br><br><br><br>
+        <br><br><br><br><br><br>
+    </section>
+
+    <footer class="site-footer">
+        <p>Built by Shubham Kumar</p>
+        <p>
+            <a href="mailto:shubhamk0027@gmail.com">Email</a> ·
+            <a href="https://www.linkedin.com/in/shubhamk0027/">LinkedIn</a> ·
+            <a href="https://github.com/shubhamk0027">GitHub</a>
+        </p>
     </footer>
 
     <script>

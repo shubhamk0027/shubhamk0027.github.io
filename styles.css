@@ -142,7 +142,7 @@ h1 {
     color: black;
 }
 
-#experience, #achievements, #projects, #education, #certifications {
+#experience, #achievements, #projects, #education, #highlights, #certifications {
     width: 65%;
     border-radius: 8px;
     padding: 20px;
@@ -330,6 +330,58 @@ h1 {
     color:white;
 }
 
+/* Highlights */
+.section-intro {
+    color: #8892b0;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.beyond-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 18px;
+}
+
+.beyond-card {
+    border-left: 2px solid white;
+    padding-left: 15px;
+}
+
+.beyond-photo {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 6px;
+    margin-bottom: 14px;
+    overflow: hidden;
+    position: relative;
+}
+
+a.beyond-photo {
+    text-decoration: none;
+}
+
+.beyond-photo img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.beyond-card h3 {
+    color: #e6f1ff;
+    font-size: 18px;
+    margin: 0 0 5px;
+}
+
+.beyond-card p {
+    color: #8892b0;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
 
 /* Certification Item */
 .certification-item {
@@ -381,34 +433,31 @@ h1 {
     transition: background-color 0.3s, color 0.3s;
 }
 
-/* Footer Styles */
-footer {
-    display: block;
-    color: #ccd6f6;
-    height: 50%;
-    width: 20%;
-    padding: 20px 0;
-    justify-content: center;
-    align-items: center;
-    border-top: 2px solid white;
-    margin-top:10%;
-    margin-bottom:10%;
-}
-
-.footer-container {
-    text-align: center;
-    width: 100%;
-    padding: 0 20px;
-}
-
-footer a {
-    color: white;
-}
-
-.footer-container p {
-    margin: 10px 0;
-    font-size: 14px;
+.site-footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.35);
     color: #8892b0;
+    margin: 4% 0 8%;
+    padding-top: 22px;
+    text-align: center;
+    width: 65%;
 }
 
+.site-footer p {
+    font-size: 14px;
+    margin: 8px 0;
+}
 
+.site-footer a {
+    color: white;
+    text-decoration: none;
+}
+
+.site-footer a:hover {
+    border-bottom: 1px solid white;
+}
+
+@media (max-width: 900px) {
+    .beyond-grid {
+        grid-template-columns: 1fr;
+    }
+}
